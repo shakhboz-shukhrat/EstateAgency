@@ -1,0 +1,81 @@
+//== COLOR
+$color-a: #000000;
+$color-a-light: #313131;
+$color-b: #2eca6a;
+$color-b-dark: #26a356;
+$color-c: #1B1B1B;
+$color-d: #adadad;
+$color-d-light: #d8d8d8;
+$color-text-a: #555555;
+$color-text-b: #2B2A2A;
+$color-w: #ffffff;
+$color-trans: transparent;
+$color-gray-light: #f3f3f3;
+$opacity: .7;
+
+//== RESPONSIVE
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$sm-max: $sm - 1;
+$md-max: $md - 1;
+$lg-max: $lg - 1;
+$xl-max: $xl - 1;
+
+@mixin breakpoint($mq) {
+  @if $mq==xs {
+    @media (min-width: $xs) {
+      @content;
+    }
+  }
+
+  @else if $mq==sm {
+    @media (min-width: $sm) {
+      @content;
+    }
+  }
+
+  @else if $mq==md {
+    @media (min-width: $md) {
+      @content;
+    }
+  }
+
+  @else if $mq==lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  }
+
+  @else if $mq==xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+
+  @else if $mq==sm_max {
+    @media (max-width: $sm-max) {
+      @content;
+    }
+  }
+
+  @else if $mq==md_max {
+    @media (max-width: $md-max) {
+      @content;
+    }
+  }
+
+  @else if $mq==lg_max {
+    @media (max-width: $lg-max) {
+      @content;
+    }
+  }
+
+  @else if $mq==xl_max {
+    @media (max-width: $xl-max) {
+      @content;
+    }
+  }
+}

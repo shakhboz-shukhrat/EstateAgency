@@ -1,0 +1,281 @@
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.section-about {
+  .title-vertical {
+    position: absolute;
+    ;
+    letter-spacing: 0;
+    transform: rotate(-90deg);
+    top: 50px;
+    text-align: left;
+    font-size: 1.8rem;
+    width: 300px;
+    font-weight: 700;
+    text-align: right;
+  }
+}
+
+.about-img-box {
+  padding-left: 1rem;
+  position: relative;
+
+  @include breakpoint(sm) {
+    padding-left: 4rem;
+  }
+
+  @include breakpoint(md) {
+    padding-left: 5rem;
+  }
+}
+
+.sinse-box {
+  background-color: $color-b;
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+
+  @include breakpoint(sm) {
+    padding: 1.5rem 2.5rem;
+    bottom: 20px;
+  }
+
+  @include breakpoint(md) {
+    padding: 1.5rem 3rem;
+  }
+
+  @include breakpoint(lg) {
+    padding: 3rem 4.5rem;
+  }
+
+  .sinse-title {
+    font-weight: 700;
+    letter-spacing: 0.043em;
+    font-size: 1rem;
+
+    @include breakpoint(sm) {
+      font-size: 1.3rem;
+    }
+
+    @include breakpoint(md) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 2.2rem;
+    }
+
+    span {
+      position: absolute;
+
+      &:after {
+        content: ' ';
+        width: 35px;
+        height: 2px;
+        background-color: $color-a;
+        position: absolute;
+        bottom: -15px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: .7rem;
+
+    @include breakpoint(sm) {
+      font-size: .8rem;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 1rem;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials-box {
+  padding: 1rem 0;
+
+  .testimonial-avatar {
+    width: 80px !important;
+    display: inline-flex !important;
+    border-radius: 50%;
+  }
+}
+
+.testimonial-ico {
+  text-align: center;
+
+  i {
+    font-size: 48px;
+    color: $color-b;
+  }
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-top: 25px;
+  padding: 1.5rem 1.5rem;
+  background-color: $color-gray-light;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 25px;
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid rgb(243, 243, 243);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+}
+
+.testimonial-author-box {
+  margin-top: 2rem;
+}
+
+.testimonial-author {
+  margin-left: 1rem;
+  display: inline-flex;
+  font-size: 1.2rem;
+  color: $color-a;
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.form-as {
+
+  #sendmessage {
+    color: $color-b;
+    border:1px solid $color-b-dark;
+    display:none;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+
+  #errormessage {
+    color: red;
+    display:none;
+    border:1px solid red;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+
+  #sendmessage.show, #errormessage.show, .show {
+    display:block;
+  }
+
+  .validation {
+    color: red;
+    display:none;
+    margin: 4px 0 20px 0;
+    font-weight:400;
+    font-size:13px;
+  }
+
+  label {
+    color: $color-a;
+    position: relative;
+  }
+
+  select.form-control-lg:not([size]):not([multiple]) {
+    height: 3.5rem;
+  }
+
+  .form-control {
+    border-radius: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+
+    &.form-control-a {
+      height: 3.5rem;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: $color-b;
+    }
+  }
+}
+
+.php-email-form {
+  
+  .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid #18d26e;
+      border-top-color: #eee;
+      animation: animate-loading 1s linear infinite;
+    }
+
+  }
+
+  label {
+    color: $color-a;
+    position: relative;
+  }
+
+  select.form-control-lg:not([size]):not([multiple]) {
+    height: 3.5rem;
+  }
+
+  .form-control {
+    border-radius: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+
+    &.form-control-a {
+      height: 3.5rem;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: $color-b;
+    }
+  }
+
+}
+
+@keyframes animate-loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

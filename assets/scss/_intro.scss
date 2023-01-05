@@ -1,0 +1,169 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.intro {
+  height: 100vh;
+  position: relative;
+  color: $color-w;
+
+  .swiper-pagination {
+    bottom: 50px;
+    .swiper-pagination-bullet {
+      width: 18px;
+      height: 10px;
+      background-color: $color-w;
+      border-radius: 0;
+      opacity: 1;
+      transition: 0.3s;
+    }
+  
+    .swiper-pagination-bullet-active {
+      background-color:  $color-b;
+      width: 36px;
+    }
+  }
+
+
+
+  .intro-item {
+    padding-top: 2rem;
+  }
+
+  .carousel-item-a {
+    position: relative;
+    height: 100vh;
+
+    &.bg-image {
+      background-attachment: scroll;
+    }
+  }
+
+  .intro-content {
+    position: absolute;
+  }
+
+  .intro-body {
+    padding-left: 1rem;
+
+    @include breakpoint(md) {
+      padding-left: 2rem;
+    }
+
+    .price-a {
+      color: $color-w;
+      padding: 1rem 1.5rem;
+      border: 2px solid $color-b;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.030em;
+    }
+  }
+
+  .spacial {
+    animation-delay: .2s;
+    color: $color-w;
+  }
+
+  .intro-title-top {
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    color: $color-w;
+    letter-spacing: .05em;
+
+    @include breakpoint(md) {
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .intro-title {
+    color: $color-w;
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+
+    @include breakpoint(sm) {
+      font-size: 3.5rem;
+    }
+
+    @include breakpoint(md) {
+      font-size: 3.5rem;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 4rem;
+    }
+  }
+
+  .intro-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    @include breakpoint(md) {
+      font-size: 2.5rem;
+    }
+
+    &.intro-price {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+
+      @include breakpoint(sm) {
+        font-size: 1.3rem;
+      }
+
+      @include breakpoint(md) {
+        padding-top: 2rem;
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint(lg) {
+        padding-top: 3rem;
+      }
+    }
+  }
+}
+
+/*------/ Intro Single /------*/
+.intro-single {
+  padding: 12rem 0 3rem;
+
+  @include breakpoint(md_max) {
+    padding-top: 9rem;
+  }
+
+  .title-single-box {
+    padding: 1rem 0 1rem 2rem;
+  }
+
+  .title-single-box {
+    border-left: 3px solid $color-b;
+
+    .title-single {
+      font-weight: 600;
+      font-size: 2.2rem;
+
+      @include breakpoint(md) {
+        font-size: 2.1rem;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .breadcrumb-box {
+    padding: 1rem 0 0 .5rem;
+  }
+
+  .breadcrumb {
+    background-color: transparent;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
